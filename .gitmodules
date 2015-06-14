@@ -1,0 +1,3 @@
+[submodule "phpwin"]
+	path = phpwin
+	url = https://github.com/TaylorMonacelli/phpwin.git
