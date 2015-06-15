@@ -12,7 +12,7 @@ endif
 
 sqlite: $(PROJECT)
 	sed -i.bak -e 's,;extension=php_pdo_sqlite.dll,extension=php_pdo_sqlite.dll,' phpwin/php/php.ini
-
+	echo continue manually with README.md
 
 $(PROJECT): | phpwin/composer
 	sed -i.bak -e 's,;extension=php_mbstring.dll,extension=php_mbstring.dll,' phpwin/php/php.ini
