@@ -15,3 +15,4 @@ touch storage/database.sqlite
 php artisan migrate --force
 php artisan migrate:rollback --force
 php artisan migrate:reset --force
+php artisan serve --port=8000
