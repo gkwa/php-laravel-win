@@ -10,6 +10,10 @@ ifneq ($(findstring $(MAKEFLAGS),w),w)
 endif
 
 
+sqlite: $(PROJECT)
+	sed -i.bak -e 's,;extension=php_pdo_sqlite.dll,extension=php_pdo_sqlite.dll,' phpwin/php/php.ini
+
+
 $(PROJECT): | phpwin/composer
 	sed -i.bak -e 's,;extension=php_mbstring.dll,extension=php_mbstring.dll,' phpwin/php/php.ini
 	sed -i.bak -e 's/^; extension_dir = "ext"/extension_dir = ext/' phpwin/php/php.ini
